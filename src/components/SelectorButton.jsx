@@ -18,7 +18,7 @@ export default function ColorToggleButton({ setAlignment, alignment }) {
         ".Mui-selected": { color: "red" },
       }}
     >
-      {/* <ToggleButton value="movies">Movies</ToggleButton> */}
+      <ToggleButton value="movies">Movies</ToggleButton>
       <ToggleButton value="anime">Anime</ToggleButton>
     </ToggleButtonGroup>
   );

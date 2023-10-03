@@ -1,16 +1,14 @@
-import { useGlobalState } from "../../context/GlobalState";
+import animeService from "../../services/animeService";
 
 function AnimeButton({ anime, setRecommendation }) {
   if (!anime.length) return;
-
-  const { postAnimeRating } = useGlobalState();
 
   const handleClick = () => {
     const payload = anime.map((item) => {
       return { anime_id: item.MAL_ID, rating: item.newRating * 2 };
     });
 
-    postAnimeRating(payload).then((data) => {
+    animeService.recommendAnime(payload).then((data) => {
       setRecommendation(data);
     });
   };

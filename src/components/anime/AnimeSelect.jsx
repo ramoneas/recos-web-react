@@ -1,14 +1,13 @@
 import AsyncSelect from "react-select/async";
 import makeAnimated from "react-select/animated";
-import { useGlobalState } from "../../context/GlobalState";
+import animeService from "../../services/animeService";
 
 const animatedComponents = makeAnimated();
 
 function AnimeSelect({ setAnime, anime }) {
-  const { getAnimeByName } = useGlobalState();
-
   const loadOptions = (params) => {
-    return getAnimeByName(params);
+    console.log(params);
+    return animeService.fetchAnimeByName(params);
   };
 
   const handleChange = (value) => {
@@ -23,6 +22,7 @@ function AnimeSelect({ setAnime, anime }) {
         value={anime}
         placeholder="Insert your favorite anime"
         getOptionLabel={(e) => e.Name}
+        getOptionValue={(e) => e.MAL_ID}
         loadOptions={loadOptions}
         onChange={handleChange}
         components={animatedComponents}
