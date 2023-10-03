@@ -6,7 +6,6 @@ const animatedComponents = makeAnimated();
 
 function AnimeSelect({ setAnime, anime }) {
   const loadOptions = (params) => {
-    console.log(params);
     return animeService.fetchAnimeByName(params);
   };
 
