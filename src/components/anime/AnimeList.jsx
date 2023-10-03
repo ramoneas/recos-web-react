@@ -1,14 +1,14 @@
 import RadioGroupRating from "../RatingIcon";
 
-function AnimeList({ anime }) {
-  if (!anime.length) return;
+function AnimeList({ content }) {
+  if (!content.length) return;
 
   return (
     <ul>
-      {anime.map((a) => (
+      {content.map((a) => (
         <li
-          className="bg-zinc-600 text-white px-3 py-1 rounded-lg mb-2 flex justify-between"
           key={a.MAL_ID}
+          className="bg-zinc-600 text-white px-3 py-1 rounded-lg mb-2 flex justify-between"
         >
           <div className="text-sm font-bold">
             <h4 className="text-2xl pb-5">{a.Name}</h4>
@@ -19,7 +19,7 @@ function AnimeList({ anime }) {
             <p>Studios: {a.Studios}</p>
           </div>
           <div>
-            <RadioGroupRating anime={a} />
+            <RadioGroupRating content={a} />
           </div>
         </li>
       ))}

@@ -13,10 +13,10 @@ export default function ColorToggleButton({ setAlignment, alignment }) {
       exclusive
       onChange={handleChange}
       aria-label="Platform"
-      sx={{
-        ".MuiButtonBase-root": { color: "#979797" },
-        ".Mui-selected": { color: "red" },
-      }}
+      // sx={{
+      //   ".MuiButtonBase-root": { color: "#979797" },
+      //   ".Mui-selected": { color: "red" },
+      // }}
     >
       <ToggleButton value="movies">Movies</ToggleButton>
       <ToggleButton value="anime">Anime</ToggleButton>

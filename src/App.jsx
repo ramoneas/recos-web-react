@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ResultCard from "./components/ResultCard";
 import ColorToggleButton from "./components/SelectorButton";
-import AnimeForm from "./components/anime/AnimeForm";
+import ContentForm from "./components/content/ContentForm";
 
 function App() {
   const [recommendation, setRecommendation] = useState([]);
@@ -22,14 +22,13 @@ function App() {
           />
         </div>
         <div>
-          {alignment === "anime" ? (
-            <AnimeForm setRecommendation={setRecommendation} />
-          ) : (
-            "OK"
-          )}
+          <ContentForm
+            setRecommendation={setRecommendation}
+            alignment={alignment}
+          />
         </div>
         <div>
-          <ResultCard recommendation={recommendation} />
+          <ResultCard recommendation={recommendation} alignment={alignment} />
         </div>
       </div>
     </main>

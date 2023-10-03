@@ -2,9 +2,9 @@ import Rating from "@mui/material/Rating";
 import { useEffect } from "react";
 
 const DEFAULT_VALUE = 5;
-export default function RadioGroupRating({ anime }) {
+export default function RadioGroupRating({ content }) {
   useEffect(() => {
-    anime.newRating = DEFAULT_VALUE;
+    content.newRating = DEFAULT_VALUE;
   }, []);
 
   return (
@@ -16,9 +16,9 @@ export default function RadioGroupRating({ anime }) {
         size="large"
         onChange={(_event, newValue) => {
           if (newValue > 1) {
-            anime.newRating = newValue * 2;
+            content.newRating = newValue * 2;
           } else {
-            anime.newRating = 1;
+            content.newRating = 1;
           }
         }}
       />

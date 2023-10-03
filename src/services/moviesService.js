@@ -1,14 +1,16 @@
+import apiService from "../services/apiServices";
+
 const url = `${import.meta.env.VITE_API_URL}/movies`;
 
-const fetchMovies = (name) => {
-  return fetchByName(url, name);
+const fetchMoviesByName = (name) => {
+  return apiService.fetchByName(url, name);
 };
 
 const recommendMovies = (payload) => {
-  return checkRecommendation(`${url}/rate`, payload);
+  return apiService.checkRecommendation(`${url}/rate`, payload);
 };
 
 export default {
-  fetchMovies,
+  fetchMoviesByName,
   recommendMovies,
 };
