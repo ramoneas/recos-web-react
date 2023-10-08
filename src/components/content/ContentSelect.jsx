@@ -2,10 +2,15 @@ import AsyncSelect from "react-select/async";
 import makeAnimated from "react-select/animated";
 import animeService from "../../services/animeService";
 import moviesService from "../../services/moviesService";
+import { useEffect } from "react";
 
 const animatedComponents = makeAnimated();
 
 function ContentSelect({ setContent, content, alignment }) {
+  useEffect(() => {
+    setContent([]);
+  }, [alignment]);
+
   const loadOptions = (params) => {
     if (alignment === "anime") {
       return animeService.fetchAnimeByName(params);

@@ -5,15 +5,15 @@ import ContentForm from "./components/content/ContentForm";
 
 function App() {
   const [recommendation, setRecommendation] = useState([]);
-  const [alignment, setAlignment] = useState("anime");
+  const [alignment, setAlignment] = useState("movies");
 
   useEffect(() => {
     setRecommendation([]);
   }, [alignment]);
 
   return (
-    <main className="bg-zinc-950 text-white min-h-screen p-10">
-      <div className=" bg-zinc-800 container mx-auto p-2 rounded-lg">
+    <main className="bg-slate-500  text-zinc-700 min-h-screen p-10">
+      <div className=" bg-slate-100 container mx-auto p-5 rounded-lg">
         <div className="flex justify-between">
           <h1 className="text-2xl font-bold pb-2">Recommendation System</h1>
           <ColorToggleButton

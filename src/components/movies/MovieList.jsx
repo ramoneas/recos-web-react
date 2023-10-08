@@ -7,7 +7,7 @@ function MovieList({ content }) {
     <ul>
       {content.map((m) => (
         <li
-          className="bg-zinc-600 text-white px-3 py-1 rounded-lg mb-2 flex justify-between"
+          className="bg-slate-200 px-3 py-1 rounded-lg mb-2 flex justify-between"
           key={m.movieId}
         >
           <div className="text-sm font-bold">

@@ -8,7 +8,7 @@ function AnimeList({ content }) {
       {content.map((a) => (
         <li
           key={a.MAL_ID}
-          className="bg-zinc-600 text-white px-3 py-1 rounded-lg mb-2 flex justify-between"
+          className="bg-slate-200 px-3 py-1 rounded-lg mb-2 flex justify-between"
         >
           <div className="text-sm font-bold">
             <h4 className="text-2xl pb-5">{a.Name}</h4>

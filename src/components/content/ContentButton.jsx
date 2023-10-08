@@ -26,7 +26,7 @@ function ContentButton({ content, setRecommendation, alignment }) {
   return (
     <div>
       <button
-        className="bg-indigo-700 text-white text-2xl px-3 py-2 rounded-lg block w-full font-bold"
+        className="bg-blue-800 text-white text-2xl px-3 py-2 rounded-lg block w-full font-bold"
         onClick={handleClick}
       >
         Recommend!

@@ -1,10 +1,7 @@
-import { useEffect } from "react";
 import AnimeCard from "./anime/AnimeCard";
 import MovieCard from "./movies/MovieCard";
 
 function ResultCard({ recommendation, alignment }) {
-  useEffect(() => {}, [recommendation]);
-
   if (!recommendation.length) return;
 
   return (
